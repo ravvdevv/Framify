@@ -32,16 +32,16 @@ export const Header = () => {
         <DialogContent className="bg-[#F6F0F0] md:max-w-md">
           <DialogHeader>
             <DialogTitle className="text-3xl">
-              Welcome to Framify! 🎨🖼️
+              Welcome to Framify! 📸✨
             </DialogTitle>
-            <DialogDescription>What is Framify?</DialogDescription>
+            <DialogDescription>Your Digital Photobooth</DialogDescription>
           </DialogHeader>
           <div className="space-y-5 text-center text-xl/relaxed sm:text-left">
             <p>
-              Transform your photos into stunning framed masterpieces with Framify! ✨ Our intuitive platform lets you create beautiful, custom frames for your favorite memories. Whether it&apos;s a special moment, a professional headshot, or just a fun selfie, Framify helps you showcase your photos in style.
+              Strike a pose and capture the moment with Framify! Our digital photobooth lets you take fun, creative photos with various frames and effects. Perfect for parties, events, or just having fun with friends! 😊
             </p>
             <p>
-              🖼️ Frame. Style. Share. Elevate your photos with Framify&apos;s creative framing tools!
+              📸 Snap. Frame. Share. Create unforgettable memories with Framify's instant digital photobooth!
             </p>
           </div>
           <DialogFooter className="gap-3">
