@@ -41,7 +41,7 @@ export const Header = () => {
               Strike a pose and capture the moment with Framify! Our digital photobooth lets you take fun, creative photos with various frames and effects. Perfect for parties, events, or just having fun with friends! 😊
             </p>
             <p>
-              📸 Snap. Frame. Share. Create unforgettable memories with Framify's instant digital photobooth!
+              📸 Snap. Frame. Share. Create unforgettable memories with Framify&apos;s instant digital photobooth!
             </p>
           </div>
           <DialogFooter className="gap-3">
