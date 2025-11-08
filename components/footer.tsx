@@ -8,7 +8,7 @@ export const Footer = () => {
        
         Made with ❤️ by{" "}
         <Button asChild variant={"link"} className="h-auto p-0 text-xl">
-          <Link href="https://github.com/ravsalt" target="_blank">
+          <Link href="https://github.com/ravvdevv" target="_blank">
             @ravdevv
           </Link>
         </Button>

@@ -8,7 +8,7 @@ import { useImagesStore } from "@/providers/images-store-provider";
 import Image from "next/image";
 import Link from "next/link";
 import { Filters } from "./filters";
-import domtoimage from "dom-to-image";
+import html2canvas from "html2canvas";
 import { Camera, Download } from "lucide-react";
 import { Preview } from "./preview";
 import { AxolotlStickers } from "./axolotl-stickers";
@@ -61,45 +61,13 @@ export const Editor = () => {
         }),
       );
 
-      // Add explicit timeout to detect silent failures
-      const timeoutPromise = new Promise((_, reject) =>
-        setTimeout(() => reject(new Error("Dom-to-image timed out")), 10000),
-      );
+      const canvas = await html2canvas(elementRef.current, {
+        backgroundColor: background,
+        scale: 2,
+        useCORS: true,
+      });
 
-      const scale = 2; // Double the size
-
-      // Create options object
-      const options = {
-        height: elementRef.current.offsetHeight * scale,
-        width: elementRef.current.offsetWidth * scale,
-        style: {
-          transform: `scale(${scale})`,
-          transformOrigin: "top left",
-          width: `${elementRef.current.offsetWidth}px`,
-          height: `${elementRef.current.offsetHeight}px`,
-        },
-      };
-
-      // Race the actual operation against the timeout
-      const dataUrl = await Promise.race([
-        domtoimage.toPng(elementRef.current, {
-          bgcolor: background,
-          cacheBust: true,
-          imagePlaceholder:
-            "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8z8BQDwAEhQGAhKmMIQAAAABJRU5ErkJggg==",
-          ...options,
-        }),
-        timeoutPromise,
-      ]);
-
-      // Check if we got a valid data URL
-      if (
-        !dataUrl ||
-        typeof dataUrl !== "string" ||
-        !dataUrl.startsWith("data:")
-      ) {
-        throw new Error("Invalid data URL returned");
-      }
+      const dataUrl = canvas.toDataURL("image/png");
 
       // Create download link
       const link = document.createElement("a");

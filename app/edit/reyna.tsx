@@ -22,42 +22,42 @@ export const Reyna = () => {
   
   return (
     <div>
-      <Image src={reyna1} alt="" className="absolute top-4 w-20" />
-      <Image src={reyna2} alt="" className="absolute top-20 right-6 w-20" />
-      <Image src={reyna3} alt="" className="absolute top-40 left-6 w-20" />
+      <Image src={reyna1} alt="" className="absolute top-4 w-16" />
+      <Image src={reyna2} alt="" className="absolute top-20 right-6 w-16" />
+      <Image src={reyna3} alt="" className="absolute top-40 left-6 w-16" />
       {!isLessThanTwoImages && (
-        <Image src={reyna4} alt="" className="absolute top-60 right-6 w-20" />
+        <Image src={reyna4} alt="" className="absolute top-60 right-6 w-16" />
       )}
       {!isLessThanTwoImages && (
-        <Image src={reyna5} alt="" className="absolute top-80 left-6 w-20" />
+        <Image src={reyna5} alt="" className="absolute top-80 left-6 w-16" />
       )}
       {!isLessThanTwoImages && (
-        <Image src={reyna6} alt="" className="absolute top-96 left-32 w-20" />
+        <Image src={reyna6} alt="" className="absolute top-96 left-32 w-16" />
       )}
       {!isLessThanThreeImages && (
         <Image
           src={reyna7}
           alt=""
-          className="absolute right-6 bottom-56 w-20"
+          className="absolute right-6 bottom-56 w-16"
         />
       )}
       {!isLessThanThreeImages && (
         <Image
           src={reyna8}
           alt=""
-          className="absolute bottom-36 left-6 w-20"
+          className="absolute bottom-36 left-6 w-16"
         />
       )}
       <Image
         src={reyna9}
         alt=""
-        className="absolute right-6 bottom-18 w-20"
+        className="absolute right-6 bottom-18 w-16"
       />
       {!isLessThanTwoImages && (
         <Image
           src={reyna10}
           alt=""
-          className="absolute bottom-8 left-6 w-20"
+          className="absolute bottom-8 left-6 w-16"
         />
       )}
     </div>
