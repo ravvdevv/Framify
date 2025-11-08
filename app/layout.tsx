@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Analytics } from "@vercel/analytics/react";
+import { Analytics } from "@vercel/analytics/next"
 import { Poppins, STIX_Two_Text } from 'next/font/google';
 import "./globals.css";
 import { Header } from "@/components/header";
@@ -24,37 +24,39 @@ const websiteUrl = "https://framify.vercel.app";
 const imageUrl = "./public/framify-preview.png";
 
 export const metadata: Metadata = {
-  title: "Framify - Your Personal Photo Framing Studio",
+  title: "Framify: Create Custom Photo Frames Online",
   description:
-    "Transform your photos into stunning framed masterpieces with Framify! ✨ Our intuitive platform lets you create beautiful, custom frames for your favorite memories. Whether it's a special moment, a professional headshot, or just a fun selfie, Framify helps you showcase your photos in style. 🖼️ Frame. Style. Share. Elevate your photos with Framify's creative framing tools!",
+    "Design and create beautiful custom photo frames online with Framify. Turn your memories into art with our easy-to-use photo framing tool. Perfect for any occasion!",
   metadataBase: new URL(websiteUrl),
   openGraph: {
     type: "website",
     url: websiteUrl,
-    title: "Framify - Your Personal Photo Framing Studio",
+    title: "Framify: Create Custom Photo Frames Online",
     siteName: "Framify",
     description:
-      "Transform your photos into stunning framed masterpieces with Framify! ✨ Our intuitive platform lets you create beautiful, custom frames for your favorite memories. Whether it's a special moment, a professional headshot, or just a fun selfie, Framify helps you showcase your photos in style. 🖼️ Frame. Style. Share. Elevate your photos with Framify's creative framing tools!",
+      "Design and create beautiful custom photo frames online with Framify. Turn your memories into art with our easy-to-use photo framing tool. Perfect for any occasion!",
     images: [
       {
         url: imageUrl,
         width: 1200,
         height: 630,
-        alt: "Framify - Your Personal Photo Framing Studio",
+        alt: "Framify: Create Custom Photo Frames Online",
       },
     ],
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Framify - Your Personal Photo Framing Studio",
+    title: "Framify: Create Custom Photo Frames Online",
     description:
-      "Transform your photos into stunning framed masterpieces with Framify! ✨ Our intuitive platform lets you create beautiful, custom frames for your favorite memories. Whether it's a special moment, a professional headshot, or just a fun selfie, Framify helps you showcase your photos in style. 🖼️ Frame. Style. Share. Elevate your photos with Framify's creative framing tools!",
+      "Design and create beautiful custom photo frames online with Framify. Turn your memories into art with our easy-to-use photo framing tool. Perfect for any occasion!",
     images: [imageUrl],
   },
   keywords: [
     "framify",
     "photo frames",
+    "custom photo frames",
+    "online photo frames",
     "picture frames",
     "photo editing",
     "custom frames",
@@ -65,31 +67,28 @@ export const metadata: Metadata = {
     "photos",
     "pictures",
     "snapshots",
-    "celebration",
-    "special occasion",
-    "friends",
-    "family",
-    "joy",
-    "laughter",
-    "magic",
-    "customizable",
-    "aesthetic",
-    "modern",
-    "twist",
-    "snap",
-    "smile",
-    "sparkle",
-    "memories",
-    "forever",
-    "click",
-    "time",
+    "photo framing tool",
+    "photo editor",
+    "online photo editor",
+    "free photo editor",
   ],
   authors: [
     {
-      name: "Briuwu",
-      url: "https://brianmillonte.vercel.app/",
+      name: "Raven",
+      url: "https://github.com/ravvdevv",
     },
   ],
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 };
 
 export default function RootLayout({
