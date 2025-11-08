@@ -13,6 +13,11 @@ import Image from "next/image";
 import { AxolotlStickers } from "./axolotl-stickers";
 import { CatStickers } from "./cat-stickers";
 import { PandaStickers } from "./panda-stickers";
+import { Zhongli } from "./zhongli";
+import { Jet } from "./jet";
+import { Justine } from "./justine";
+import { Sage } from "./sage";
+import { Reyna } from "./reyna";
 
 type Props = {
   background: string;
@@ -21,7 +26,7 @@ type Props = {
   filter: string;
   images: string[];
   dateEnabled: boolean;
-  stickers: "axolotl" | "cat" | "panda" | null;
+  stickers: "axolotl" | "cat" | "panda" | "zhongli" | "jet" | "justine" | "sage" | "reyna" | null;
 };
 
 export const Preview = ({
@@ -84,6 +89,11 @@ export const Preview = ({
           {stickers === "axolotl" && <AxolotlStickers />}
           {stickers === "cat" && <CatStickers />}
           {stickers === "panda" && <PandaStickers />}
+          {stickers === "zhongli" && <Zhongli />}
+          {stickers === "jet" && <Jet />}
+          {stickers === "justine" && <Justine />}
+          {stickers === "sage" && <Sage />}
+          {stickers === "reyna" && <Reyna />}
         </div>
       </DialogContent>
     </Dialog>

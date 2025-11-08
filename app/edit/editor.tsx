@@ -14,6 +14,11 @@ import { Preview } from "./preview";
 import { AxolotlStickers } from "./axolotl-stickers";
 import { CatStickers } from "./cat-stickers";
 import { PandaStickers } from "./panda-stickers";
+import { Zhongli } from "./zhongli";
+import {Jet} from "./jet";
+import {Justine} from "./justine";
+import {Sage} from "./sage";
+import {Reyna} from "./reyna";
 
 export const Editor = () => {
   const { photostrip, background, filter, dateEnabled, stickers } =
@@ -98,7 +103,7 @@ export const Editor = () => {
 
       // Create download link
       const link = document.createElement("a");
-      link.download = "bubblybooth-photostrip.png";
+      link.download = "framify-photostrip.png";
       link.href = dataUrl;
       document.body.appendChild(link);
       link.click();
@@ -171,6 +176,11 @@ export const Editor = () => {
           {stickers === "axolotl" && <AxolotlStickers />}
           {stickers === "cat" && <CatStickers />}
           {stickers === "panda" && <PandaStickers />}
+          {stickers === "zhongli" && <Zhongli />}
+          {stickers === "jet" && <Jet />}
+          {stickers === "justine" && <Justine />}
+          {stickers === "sage" && <Sage />}
+          {stickers === "reyna" && <Reyna />}
         </div>
       </div>
       <Filters />
