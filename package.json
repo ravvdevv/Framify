@@ -20,7 +20,7 @@
     "embla-carousel-react": "^8.5.2",
     "html2canvas": "^1.4.1",
     "lucide-react": "^0.479.0",
-    "next": "15.2.6",
+    "next": "15.2.8",
     "react": "^0.0.0-experimental-0ca3deeb-20250311",
     "react-dom": "^0.0.0-experimental-0ca3deeb-20250311",
     "react-timer-hook": "^4.0.5",
